@@ -4,7 +4,7 @@ export default function Header() {
     return (
     <header id="headerSection" className="header">
         <div className="header__container">
-            <img className="header__logo" src="./img/AAlogo.svg" />
+            <img className="header__logo" src="folio/img/AAlogo.svg" alt="Logo Audrey Adélaïde web developer" />
             <h1>Audrey Adélaïde</h1>
         </div>
         <nav className="header__navbar">

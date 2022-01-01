@@ -14,11 +14,11 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

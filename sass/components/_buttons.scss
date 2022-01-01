@@ -1,0 +1,33 @@
+.btn {
+    padding: 20px;
+    margin-right: 2%;
+  
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    // background: $color-1;
+    @include gradient;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+  
+    &--grey {
+      background: rgb(65, 65, 65);
+    }
+  
+    &:hover {
+      // background: lighten($color-1, 5%);
+  
+      transform: scale(1.1);
+    }
+  }
+  
+  // @keyframes hrWidth {
+  //   from {
+  //     width: 0;
+  //   }
+  //   to {
+  //     width: 100%;
+  //   }
+  // }
+  

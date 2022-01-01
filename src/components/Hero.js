@@ -5,23 +5,28 @@ export default function Hero() {
     <section id="heroSection" className="hero">
         <div className="hero__container">
 
-            <div>
-                <h1>Bonjour, Je suis <br />
-                <span>Audrey Adélaïde</span> <br />
-                J&rsquo;adore concevoir de superbes applications incroyable.</h1>
+            <div className="hero__presentation">
+                <h1>Bonjour, Je suis
+                <span className="name">Audrey Adélaïde</span> <br />
+                J&rsquo;adore concevoir de superbes applications.</h1>
 
-                <p className="a definir...">
-                <strong>Développeuse Web</strong> en formation, <br />
+                <p className="hero__introduction"> 
+                <span className="job">Développeuse Web </span> <br /> En formation avec OpenClassrooms, <br />
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                 laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
                 Laborum, voluptas natus?
                 </p>
+
+                <div>
+                <button className="hero__btn btn btn--grey">Télécharger mon CV</button>
+                <button className="hero__btn btn">Me recruter</button>
+            </div>
             </div>
 
-            <div>
-                <button>CV</button>
-                <button>Me recruter</button>
-            </div>
+
+            <div className="hero__logo hero--flex">
+                    <img src="folio/img/AAlogo.svg" alt="Audrey Adélaïde | Développeuse web logo" />
+                </div>
         </div>
     </section>
     );
