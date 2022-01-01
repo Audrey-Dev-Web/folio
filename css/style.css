@@ -1,4 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oooh+Baby&display=swap");
+@keyframes bumb {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes ciaoHamb {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+.btn {
+  padding: 20px;
+  margin-right: 2%;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(120deg, #617dfa 30%, #a25bfa 100%);
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.btn--grey {
+  background: #414141;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,10 +72,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  text-transform: uppercase;
-}
-
 .header {
   width: 100%;
   height: 75px;
@@ -40,6 +89,7 @@ h1 {
 .header__container h1 {
   font-size: 1.2em;
   font-weight: 100;
+  text-transform: uppercase;
 }
 .header__logo {
   width: 50px;
@@ -123,59 +173,106 @@ h1 {
   .navlinks li:hover:after {
     transform-origin: 0% 50%;
   }
-
-  [type="checkbox"]:checked ~ .navlinks {
-    top: 70px;
-  }
-  [type="checkbox"]:checked ~ .navmobil {
-    transition: animation 1s;
-  }
-  [type="checkbox"]:checked ~ .navmobil .fa-times {
-    display: inline-block;
-    position: absolute;
-    right: 6%;
-    opacity: 0;
-    animation: bumb 1s forwards ease-in-out;
-    animation-delay: 0.7s;
-  }
-  [type="checkbox"]:checked ~ .navmobil .fa-bars {
-    position: absolute;
-    right: 6%;
-    animation: ciaoHamb 0.6s forwards ease-in-out;
-  }
-
-  [type="checkbox"]:not(:checked),
-  [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px;
-  }
 }
-@keyframes bumb {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  75% {
-    opacity: 1;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.hero {
+  width: 100%;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-@keyframes ciaoHamb {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-    visibility: hidden;
-  }
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5%;
+}
+.hero__container img {
+  width: 100%;
+  animation: floating 2s forwards infinite ease-in-out alternate;
+}
+.hero__container h1 {
+  font-size: 2em;
+  font-weight: 300;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.hero__container h1 .name {
+  background-image: linear-gradient(120deg, #617dfa 30%, #a25bfa 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.5em;
+  font-family: "Oooh Baby", cursive;
+  margin-left: 20px;
+}
+.hero__container h2 {
+  font-size: 5em;
+  line-height: 65px;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, #617dfa 30%, #a25bfa 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: -2px -5px 0 #fff;
+}
+.hero__presentation {
+  width: 50%;
+}
+.hero__welcome {
+  font-size: 2em;
+  font-family: "Oooh Baby", cursive;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.hero--flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero presentation {
+  width: 60%;
+}
+.hero__logo {
+  width: 30%;
+  padding: 50px;
+  margin: 20px;
+}
+.hero__subtitle {
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.hero__cta {
+  margin-top: 15px;
+}
+.hero__btn {
+  font-size: 1.2em;
+}
+.hero__scrollDown {
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__scrollDown--container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero__introduction {
+  font-size: 1.3em;
+  margin-top: 50px;
+}
+.hero__introduction .job {
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, #617dfa 30%, #a25bfa 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
